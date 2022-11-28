@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+
+{% block css %}
+
+<link href="{{ url_for('static', filename='css/result_video.css') }}" rel="stylesheet">
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="container-fluid p-0">
+    <div id="blog-carousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="w-100" src="{{ url_for('static', filename='img/black.jpg') }}" alt="Image">
+                <div class="container carousel-caption d-flex flex-column align-items-center justify-content-center">
+                    <div class="card">
+                      <h3>Video Streaming Demonstration</h3>
+                      <div class="drop_box">
+                        <img class='result' src="/result">
+                      </div>
+                  
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

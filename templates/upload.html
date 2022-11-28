@@ -1,0 +1,37 @@
+{% extends 'base.html'%}
+
+
+{% block css %}
+
+<link href="{{ url_for('static', filename='css/file_upload.css') }}" rel="stylesheet">
+
+{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid p-0">
+    <div id="blog-carousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="w-100" src="{{ url_for('static', filename='img/black.jpg') }}" alt="Image">
+                <div class="container carousel-caption d-flex flex-column align-items-center justify-content-center">
+                    <div class="card">
+                      <h3>Upload File</h3>
+                      <div class="drop_box">
+                        <header>
+                          <h4>Select File here</h4>
+                        </header>
+                        <form  method="post" enctype= 'multipart/form-data' id= 'form1'>
+                            <input class="btn2 "type="file" id="file1" name="file1" accept= "image/*, video/*">
+                        </form>
+                        <button class="btn" form="form1" value= "Upload" >Upload</button>
+                      </div>
+                  
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

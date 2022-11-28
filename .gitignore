@@ -1,0 +1,64 @@
+# Repo-specific GitIgnore ----------------------------------------------------------------------------------------------
+*.jpg
+*.pdf
+*.PDF
+*.jpeg
+*.png
+*.bmp
+*.tif
+*.tiff
+*.heic
+*.JPG
+*.JPEG
+*.PNG
+*.BMP
+*.TIF
+*.TIFF
+*.HEIC
+*.mp4
+*.mov
+*.MOV
+*.avi
+*.data
+*.json
+*.cfg
+
+#Some files to un ignore:
+!*yolov7.pdf
+
+
+# Directory to ignore
+PPE_missing/
+uploads/
+
+
+# Google Gmail API related
+client_secret.json
+token.json
+
+
+# Neural Network weights -----------------------------------------------------------------------------------------------
+*.weights
+*.pt
+*.pb
+*.onnx
+*.engine
+*.mlmodel
+*.torchscript
+*.tflite
+*.h5
+*_saved_model/
+*_web_model/
+*_openvino_model/
+darknet53.conv.74
+yolov3-tiny.conv.15
+*.ptl
+*.trt
+
+#weights to un ignore:
+!best.pt
+
+
+#Pycache file ignore
+*__pycache__
+__pycache__

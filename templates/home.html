@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<div class="container-fluid p-0">
+    <div id="blog-carousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="w-100" src="{{ url_for('static', filename='img/black.jpg') }}" alt="Image">
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                    <h4 class="text-primary m-0">The fastest and most accurate real-time object detection model</h4>
+                    <h4 class="display-4 m-0 mt-2 mt-md-3 text-white">Object Detection, Based on Yolov7</h4>
+                    <a href="/video" class="btn btn-lg btn-primary mt-3 mt-md-4 px-4">Start Detecting!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock  %}
