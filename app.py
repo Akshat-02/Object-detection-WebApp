@@ -14,7 +14,7 @@ from send_email import prepare_and_send_email
 
 
 #Email headers and body 
-RECIPIENT= 'anubhavpatrick@gmail.com'
+RECIPIENT= ''         #Enter the mail of reciever
 SUBJECT= 'This mail is sent after one or several person were detected without safety gears.'
 MESSAGE_BODY_TEXT= 'Hello Sir, I have extended the task and integrated flask web app and gmail api in a way that it is sending emails only when person class is detected without helmet or jacket.\n\n Regards,\n Akshat Kushwaha'
 FILES = []
@@ -46,8 +46,12 @@ def send_email():
 
     FILES.append(os.path.abspath('PPE_missing.pdf'))          #Adding df to FILE to be passed as argumetn in below function.
 
-    #sends the email using function imported through send_email module.
-    prepare_and_send_email(recipient= RECIPIENT, subject= SUBJECT, message_text= MESSAGE_BODY_TEXT, file_attachments= FILES)
+    if not len(RECIPIENT):
+        #sends the email using function imported through send_email module.
+        prepare_and_send_email(recipient= RECIPIENT, subject= SUBJECT, message_text= MESSAGE_BODY_TEXT, file_attachments= FILES)
+    
+    else:
+        raise Exception("RECIPIENT value is empty")
 
 #Creating a thread for above function
 send_mail_thread = threading.Thread(target= send_email)

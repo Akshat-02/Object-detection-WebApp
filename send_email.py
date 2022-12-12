@@ -166,13 +166,13 @@ def prepare_and_send_email(recipient, subject, message_text, file_attachments= N
         print(f'An error occured: {error}')
 
 
-if __name__ == '__main__':
+if __name__ == '__main__':                          #Use independently without yolov7 conditonal requirement.
 
-    RECIPIENT= 'thesuspectindia@gmail.com'
+    RECIPIENT= ''           #Recieving person mail
     SUBJECT= 'This is for testing please ignore.'
     MESSAGE_BODY_TEXT= 'YOu are the chosen few, few the fearless you gonna be'
     
-    FILES= [r'C:\Users\aksha\OneDrive\Desktop\Wallpapers\19609.jpg', r'C:\Users\aksha\OneDrive\Desktop\Wallpapers\21635.jpg']
+    FILES= []                    #list of file paths to send 
 
     prepare_and_send_email(recipient= RECIPIENT, subject= SUBJECT, 
                         message_text= MESSAGE_BODY_TEXT, file_attachments= FILES)
